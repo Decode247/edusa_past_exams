@@ -26,13 +26,13 @@ Widget tutorCard() {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Tutor Details',
+                    'TUTOR DETAILS',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 20),
                   Column(
                     children: [
                       const CircleAvatar(
@@ -175,7 +175,7 @@ Widget tutorCard() {
                   children: [
                     const SizedBox(width: 60),
                     const Text(
-                      'Contact details:',
+                      'CONTACT DETAILS',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
