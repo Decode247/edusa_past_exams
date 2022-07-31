@@ -11,8 +11,6 @@ export 'package:edusa_past_exams/screens/view/view.dart';
 export 'package:edusa_past_exams/core/theme/theme.dart';
 export 'package:edusa_past_exams/core/widgets/button.dart';
 export 'package:edusa_past_exams/core/widgets/button.dart';
-export 'package:edusa_past_exams/core/widgets/drawer.dart';
-export 'package:edusa_past_exams/core/widgets/drawer_hearder.dart';
 export 'package:edusa_past_exams/screens/papers/term1.dart';
 export 'package:edusa_past_exams/core/widgets/term1.dart';
 export 'package:edusa_past_exams/core/widgets/term2.dart';
