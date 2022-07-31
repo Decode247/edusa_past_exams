@@ -8,9 +8,9 @@ class Term1 extends StatefulWidget {
 }
 
 class _Term1State extends State<Term1> {
-  final adCtrl = Get.put(AdCtrl(screen: '/welcome'));
   @override
   Widget build(BuildContext context) {
+    final adCtrl = Get.put(AdCtrl(screen: '/welcome'));
     final data = Get.arguments;
     return WillPopScope(
       onWillPop: () async {

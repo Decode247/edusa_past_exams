@@ -6,10 +6,8 @@ class AdCtrl extends GetxController {
   }
   String screen;
   late BannerAd myBanner;
-  late BannerAd myInLineBanner;
   late InterstitialAd myInterstitialAd;
   var isBannerLoaded = false.obs;
-  var isInLineBannerLoaded = false.obs;
   var isInterstitialLoaded = false.obs;
 
   @override
@@ -17,13 +15,11 @@ class AdCtrl extends GetxController {
     super.onInit();
     _initBanner();
     _initInterstitialAd();
-    _initInLineBanner();
   }
 
   _initBanner() {
     myBanner = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', //test ad id
-      //'ca-app-pub-6775397213739769/2880287278',
+      adUnitId: 'ca-app-pub-6775397213739769/1991932775',
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -36,25 +32,6 @@ class AdCtrl extends GetxController {
       ),
     );
     myBanner.load();
-  }
-
-  //2874679735
-
-  _initInLineBanner() {
-    myInLineBanner = BannerAd(
-      adUnitId: 'ca-app-pub-6775397213739769/2880287278',
-      size: AdSize.mediumRectangle,
-      request: const AdRequest(),
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          isInLineBannerLoaded(true);
-        },
-        onAdFailedToLoad: ((ad, error) {
-          myInLineBanner.dispose();
-        }),
-      ),
-    );
-    myInLineBanner.load();
   }
 
   void _initInterstitialAd() {

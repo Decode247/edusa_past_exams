@@ -3,36 +3,29 @@ import 'package:edusa_past_exams/core/imports/imports.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
+  AppTheme theme = AppTheme();
 
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    AppTheme theme = AppTheme();
-    return GetMaterialApp(
+  runApp(
+    GetMaterialApp(
       title: 'Edusa',
       debugShowCheckedModeBanner: false,
       initialRoute: '/welcome',
       getPages: [
         GetPage(
           name: '/welcome',
-          page: () => Welcome(),
+          page: () => const Welcome(),
         ),
         GetPage(
           name: '/study',
-          page: () => StudyMaterial(),
+          page: () => const StudyMaterial(),
         ),
         GetPage(
           name: '/tutor',
-          page: () => Tutor(),
+          page: () => const Tutor(),
         ),
         GetPage(
           name: '/past_papers',
-          page: () => Home(),
+          page: () => const Home(),
         ),
         GetPage(
           name: '/viewers',
@@ -48,7 +41,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/term3',
-          page: () => Term3(),
+          page: () => const Term3(),
         ),
         GetPage(
           name: '/term4',
@@ -56,9 +49,6 @@ class MyApp extends StatelessWidget {
         ),
       ],
       theme: theme.theme,
-    );
-  }
+    ),
+  );
 }
-
-//'ca-app-pub-6775397213739769/2880287278',
-//"ca-app-pub-6775397213739769/5381223885",

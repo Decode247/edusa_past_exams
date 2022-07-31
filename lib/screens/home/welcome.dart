@@ -1,8 +1,7 @@
 import 'package:edusa_past_exams/core/imports/imports.dart';
 
 class Welcome extends StatelessWidget {
-  Welcome({Key? key}) : super(key: key);
-  final adctrl = Get.put(AdCtrl());
+  const Welcome({Key? key}) : super(key: key);
 
   Future<bool?> showWarning(BuildContext context) => showDialog(
         context: context,
@@ -36,6 +35,7 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final adctrl = Get.put(AdCtrl());
     return WillPopScope(
       onWillPop: () async {
         bool isQuiting = false;

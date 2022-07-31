@@ -4,11 +4,11 @@ import 'package:edusa_past_exams/core/imports/imports.dart';
 import 'package:edusa_past_exams/core/widgets/terms.dart';
 
 class Home extends StatelessWidget {
-  Home({Key? key}) : super(key: key);
-  final adCtrl = Get.put(AdCtrl(screen: '/welcome'));
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final adCtrl = Get.put(AdCtrl(screen: '/welcome'));
     return WillPopScope(
       onWillPop: () async {
         try {
